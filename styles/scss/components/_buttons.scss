@@ -1,0 +1,119 @@
+.button {
+  @include flex(center);
+  border: none;
+  border-radius: 20px;
+  background: none;
+  max-width: 30%;
+  min-width: 300px;
+  width: 313px;
+  padding: 1rem 0;
+  position: relative;
+  margin:3rem auto auto;
+  overflow: hidden;
+  @include aup-shadow(box, $dark-blue, 3, 3);
+//  box-shadow: 3px 3px 10px 0px $dark-blue;
+  svg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+     //transition: .35s ease-out;
+  }
+}
+
+.button::before{
+  content: "";
+  display: inline-block;
+  background: white;
+  position: absolute;
+ bottom: -270%;
+ left: -30%;
+ transition: .35s ease-out;
+ z-index: 10;
+ height: 300%;
+ width: 30%;
+ transform: rotate(-32deg)
+}
+.button::after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: 50%;
+  bottom: 50%;
+  mix-blend-mode: darken;
+   transition: .2s ease-out;
+   background: rgb(244,116,59);
+   background: linear-gradient(352deg, rgba(244,116,59,0) 0%, rgba(244,116,59,0.8) 30%, rgba(244,116,59,0.8) 70%, rgba(244,116,59,0) 100%);  border-radius: 20px;
+  z-index: 11;
+  box-sizing: border-box;
+}
+/*.button:hover {
+  > svg {
+    transform: rotateX(180deg);
+  }
+}
+*/
+.button:hover::before{
+  bottom: 130%;
+  left: 130%;
+}
+
+.button:active {
+ top: .1rem;
+ @include aup-shadow(box, $dark-blue, 1, 1);
+}
+
+.btn-1 {
+  fill: url(#linear-gradient);
+}
+
+.btn-2 {
+  opacity: 0.66;
+  fill: url(#radial-gradient2);
+}
+
+.btn-3 {
+  fill: url(#linear-gradient-2);
+}
+
+.btn-4, .btn-6 {
+  fill: none;
+}
+
+.btn-4 {
+  stroke: #e6ff81;
+  stroke-width: 5px;
+}
+
+.btn-5 {
+  stroke: none;
+}
+
+/*
+.button::before {
+  @include pseudo-setup;
+  border-radius: 3px;
+  background: rgb(237,231,43);
+  background: linear-gradient(180deg, rgba(237,231,43,0) 0%, rgba(119,116,22,1) 100%);
+}
+
+.button::after {
+  @include pseudo-setup;
+    border-radius: 3px;
+  background: rgb(255,248,38);
+  background: linear-gradient(0deg, rgba(255,248,38,0.11) 0%, rgba(237,231,43,1) 66%, rgba(254,252,188,1) 96%, rgba(249,248,113,1) 100%);
+}
+*/
+.button__text, .btn-text {
+  font-family: $title-font;
+  color: $dark-blue;
+  text-shadow: 0px -1px 0px rgba(255,255,255,.5);
+  font-size: 2rem;
+  letter-spacing: .020rem;
+  margin: auto;
+//  position: absolute;
+//top: 0;
+  z-index: 11;
+}

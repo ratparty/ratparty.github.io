@@ -1,0 +1,91 @@
+.header {
+  background-image: url("../../assets/header_bg.jpg");
+  background-size: 2000px;
+  //120%;
+  background-position:  0% 75%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: visible;
+  @include max-width(1300px){
+    //  background-size: 1800px;
+          background-position: 40% 77%;
+  }
+  @include max-width(800px){
+    background-position: 50% 77%;
+
+  }
+  @include max-width(550px){
+    background-position: 60% 77%;
+
+  }
+}
+
+
+.header__layer {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.header__layer--overlay {
+  background: rgba($header-overlay,.48);
+  mix-blend-mode: overlay;
+}
+
+.header__layer--gradient{
+  @include max-width(800px){
+    top: -20%;
+  }
+}
+.cls-1b {
+  opacity: 0.2;
+  fill: url(#radial-gradient);
+}
+
+// .page-landing {
+//   position: relative;
+//   z-index: 3;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   max-height: 100%;
+//   flex: 1;
+// }
+
+.title {
+  z-index: 5;
+}
+
+.title__line-one {
+  display: inline-block;
+  padding-bottom: (.5*$ru);
+}
+.title__florida-keys {
+  display: inline-block;
+}
+ .cta {
+//
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//     flex: 1;
+ }
+
+.cta__text {
+  color: $green;
+  font-size: 3rem;
+  margin: 0 auto;
+  align-self: center;
+  @include text-outline($dark-blue, $text-shadow-2-2);
+  @include max-width(950px){
+    font-size: 2.5em;
+  }
+  @include max-width(760px){
+    font-size: 2em;
+  }
+}

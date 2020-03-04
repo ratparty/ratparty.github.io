@@ -1,0 +1,15 @@
+.contact-container {
+	// grid-column: 9 / span 3;
+	// margin-top: .5rem;
+  	@include flex(center, column, flex-end);
+    display: inline-block;
+}
+.contact-details {
+	//	line-height: 1rem;
+	//	font-size: 1rem;
+		margin: 0;
+		padding: 0;
+}
+.icon {
+	color: $light-text;
+}

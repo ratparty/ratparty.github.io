@@ -1,0 +1,29 @@
+footer {
+  @include grid;
+  @include dark-scheme;
+  font-weight: 300;
+  padding: (3*$ru) 0 (4*$ru);
+}
+
+.footer-info {
+	grid-column: 3 / span 8;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.footer-nav {
+		a {
+	//		line-height: $baseline;
+			padding-bottom: 0;
+		}
+}
+.footer-nav-dot {
+	color: $dark-blue;
+	transition: color .2s;
+}
+
+.footer-nav ul li:hover .footer-nav-dot {
+	color: $light-text;
+}

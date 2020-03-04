@@ -1,0 +1,34 @@
+img {
+  box-shadow: 0px 1px 5px 0px rgba($dark-blue,.36);
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  max-height: auto;
+  place-self: center;
+  //margin: $rhythm-unit auto;
+}
+img::after {
+  @include pseudo-setup;
+
+  box-shadow: 0px 2px 2px 0px rgba($dark-blue,.42);
+}
+
+img::before {
+  @include pseudo-setup;
+  box-shadow: 0px 3px 1px -2px rgba($dark-blue,.6);
+}
+
+
+.img-right {
+  grid-column: 8 / span 4;
+  grid-row: span 4;
+  align-self: center;
+  justify-self: start;
+    @include single-column;
+}
+
+.img-left {
+  grid-column: 2 / span 4;
+  grid-row: span 2;
+  @include single-column;
+}

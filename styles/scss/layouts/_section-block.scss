@@ -1,0 +1,52 @@
+.section--flex {
+  @include section;
+  @include flex(center);
+}
+.section--grid {
+  @include section;
+  @include grid;
+  > h2, h3 {
+    grid-column: span 12;
+    justify-self: center;
+  }
+  > p, dl {
+    @extend .single-column;
+    justify-self: center;
+  }
+}
+.section--main {
+  padding: ($rhythm-unit*5) 0 ($rhythm-unit*10);
+  > p, dl {
+    @extend .single-column;
+    justify-self: center;
+  }
+}
+.subsection--grid {
+  @extend .section--grid;
+  grid-column: 1 / span 12;
+    margin-top: ($rhythm-unit*2.5);
+}
+.section__text {
+  @include flex(center, column);
+  p {
+    max-width: 30em;
+  }
+}
+.section--dark {
+  background-color: $dark-shade;
+    color: $light-text;
+}
+
+.section--light {
+  background-color: $light-colour;
+  @include light-scheme;
+}
+.subsection--double-column {
+  @extend .grid-content-area;
+//  @include g;
+}
+
+.text-image {
+  @extend .grid-content-area;
+  @include flex(space-around);
+}

@@ -1,0 +1,15 @@
+.guarantee {
+  @include dark-scheme;
+  h2 {
+  letter-spacing: .005em;
+  @include text-outline($dark-blue);
+  color: white;
+  margin: 0 1rem;
+  @include max-width(1000px){
+    font-size: 1.5rem;
+  }
+  @include max-width(600px){
+    font-size: 1.3rem;
+  }
+  }
+}

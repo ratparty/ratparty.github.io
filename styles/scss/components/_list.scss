@@ -1,0 +1,25 @@
+.list {
+  width: 100%;
+  @include flex(center, column, flex-start);
+  margin: 0 auto;
+  dl, ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
+    width: 80%
+  }
+  dt {
+    text-align: center;
+    text-decoration: underline;
+  }
+  dd {
+    margin-bottom: ($rhythm-unit*1);
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.list-header {
+
+
+}

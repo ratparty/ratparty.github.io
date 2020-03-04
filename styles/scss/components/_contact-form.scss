@@ -1,0 +1,39 @@
+.contact-form {
+  grid-column: 1/ span 12;
+  place-self: center;
+  max-width: 40rem;
+  @include flex(center, column);
+}
+
+// label {
+//   grid-column: 2 / span 4;
+//   justify-self: start;
+// }
+
+.form__label {
+  margin-top: ($rhythm-unit*.5);
+}
+// }
+// .contact-preference {
+//   grid-column: 2 / span 4;
+//   justify-self: start;
+// }
+//
+//  #contact-preference{
+//    grid-column: 2 / span 4;
+//  }
+// [type=text], [type=email], [type=tel] {
+//   grid-column:  2 / span 3;
+// }
+.contact__radios {
+  @include flex(space-around);
+}
+#message {
+  height: (6*$ru);
+}
+//
+[type=submit] {
+ width: 6rem;
+ margin: 1rem;
+ align-self: flex-end;
+}

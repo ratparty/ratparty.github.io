@@ -1,0 +1,40 @@
+.grid {
+  @include grid;
+}
+
+.grid-spacer {
+  grid-column: 1 / span 12;
+}
+
+
+.left-column {
+  grid-column: 3 / span 4;
+  p {
+    padding-right: 1rem;
+    max-width: 30em;
+  }
+  // @include max-width(1490px){
+  //   grid-column: 2 / span 5;
+  // }
+}
+
+
+.right-column {
+  grid-column: 7 / span 4;
+  p {
+    padding-left: 1rem;
+    max-width: 30em;
+  }
+}
+
+.single-column {
+  @extend .grid-content-area;
+  max-width: 40em;
+  p {
+    align-self: center;
+  }
+}
+.grid-content-area {
+    grid-column: 3/span 8;
+    place-self: center;
+}

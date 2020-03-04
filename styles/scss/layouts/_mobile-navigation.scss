@@ -1,0 +1,50 @@
+#mobileNav {
+  background-color: $colour-sky;
+  font-family: $body-font;
+  color: $light-text;
+  font-size: 1.25em;
+  visibility: hidden;
+  overflow: visible;
+  position: fixed;
+  top: 0;
+  right: 0;
+    z-index: 30000;
+     border-bottom-left-radius: 20px;
+  ul {
+    @include flex(space-between, column);
+    li
+    {padding: .5rem 1rem;
+    }
+  }
+  @include max-width(700px){
+  visibility: visible;
+}
+}
+.nav-icon {
+  font-size: 2rem;
+  display: inline-block;
+
+}
+.nav-icons {
+ @include flex(center);
+
+  a {
+    padding: (.5*$ru) 1rem;
+  }
+}
+#open {
+  display: inline-block;
+}
+#close {
+  display: none;
+}
+#mobileNavMenu {
+   max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: 0.7s ease-in-out;
+}
+
+.mobile-nav__menu--open {
+  height: ($ru*4);
+}

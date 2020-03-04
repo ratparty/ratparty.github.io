@@ -1,0 +1,15 @@
+.banner {
+  @include section;
+  @include flex(center);
+  text-align: center;
+  @include aup-shadow(box, $dark-blue, 2, 6);
+  position: relative;
+  z-index: 100;
+  padding: ($ru*2) 0;
+}
+
+main {
+  position:relative;
+  z-index: 20;
+    @include aup-shadow(box, $dark-blue, 2, 6);
+}
