@@ -667,7 +667,7 @@ main {
 
 .video {
   margin: 0 auto;
-  grid-column: 2/span 10;
+  grid-column: 3/span 8;
   place-self: center;
   position: relative;
   width: 100%;
@@ -680,6 +680,11 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 750px) {
+  .video {
+    grid-column: 2/span 10;
+  }
 }
 
 /* taken from the last website css- idk if any of this is needed but saving in @charset ".video-container {
@@ -940,6 +945,7 @@ nav ul {
   overflow: hidden;
   transition: opacity;
   transition-delay: 0.5s;
+  position: relative;
   z-index: 5;
 }
 .top-nav__header p {
@@ -958,7 +964,7 @@ nav ul {
 .colour-block {
   position: absolute;
   top: 0;
-  width: 50%;
+  width: 100%;
   height: 500%;
   background: #6d98b6;
   background: linear-gradient(0deg, rgba(109, 152, 182, 0) 0%, #6d98b6 80%, #6d98b6 100%);
