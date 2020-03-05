@@ -780,15 +780,25 @@ main {
 }
 
 .captains-trip-info {
-  grid-row: 4;
-  grid-column: 4/span 6;
+  grid-column: 3/span 7;
   margin: 4rem 0;
   padding: 1rem;
-  border: 6px solid transparent;
-  border-radius: 5px;
+  border: double 5px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(#c5d6e2, #c5d6e2), linear-gradient(50deg, #06227d, #0767F2);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0px 1px 5px 0px rgba(1, 14, 33, 0.24), 0px 3px 1px -2px rgba(1, 14, 33, 0.4), 0px 2px 2px 0px rgba(1, 14, 33, 0.28);
 }
 .captains-trip-info h3 {
   margin-bottom: 0.75rem;
+}
+@media screen and (max-width: 900px) {
+  .captains-trip-info {
+    grid-column: 2/span 10;
+    place-self: center;
+    max-width: 40em;
+  }
 }
 
 .contact-container {

@@ -1,12 +1,18 @@
+@use "sass:color";
+
 .captains-trip-info {
   h3 {
     margin-bottom: ($ru*.5);
   }
-  grid-row: 4;
-  grid-column: 4 / span 6;
+  //grid-row: 4;
+  grid-column: 3 / span 7;
   margin: 4rem 0;
   padding: 1rem;
-  border: 6px solid transparent;
-  border-radius: 5px;
-//  border-image: linear-gradient(50deg, $light-accent, $main-color) 1;
+  border: double 5px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(color.scale($colour-sky, $lightness:60%), color.scale($colour-sky, $lightness:60%)), linear-gradient(50deg, $colour-blue, $bright-blue);
+  background-origin: border-box;
+background-clip: padding-box, border-box;
+@include aup-shadow(box, $dark-blue, 2, 2);
+  @include single-column(text);
 }
