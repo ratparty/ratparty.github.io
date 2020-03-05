@@ -12,6 +12,7 @@
   overflow: hidden;
   @include aup-shadow(box, $dark-blue, 3, 3);
 //  box-shadow: 3px 3px 10px 0px $dark-blue;
+ cursor: pointer;
   svg {
     width: 100%;
     position: absolute;

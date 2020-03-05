@@ -28,6 +28,13 @@
 .contact__radios {
   @include flex(space-around);
 }
+
+.form__text-box {
+  border: 1px solid $dark-blue;
+  border-radius: 2px;
+  padding: (.25*$ru);
+}
+
 #message {
   height: (6*$ru);
 }
@@ -36,4 +43,5 @@
  width: 6rem;
  margin: 1rem;
  align-self: flex-end;
+ padding: (.25*$ru);
 }
