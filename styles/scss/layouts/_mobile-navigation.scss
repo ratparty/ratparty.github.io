@@ -28,7 +28,7 @@
 }
 .mobile-nav__bar {
     width: 100%;
-      border-bottom-left-radius: 20px;
+//      border-bottom-left-radius: 20px;
       position: relative;
       display: none;
       justify-content: space-between;
@@ -78,6 +78,7 @@
   align-items: center;
   min-width: 60px;
   a {
+    max-width: 5rem;
     width: 100%;
     padding: (.5*$ru) 1rem;
     margin: auto;
@@ -113,6 +114,14 @@
 }
 
 .mobile-nav__bar--scrolled {
+    width: 100%;
 
+}
 
+.nav-bar--open {
+  border-bottom-left-radius: 0;
+}
+
+.nav-bar--closed {
+  border-bottom-left-radius: 20px;
 }

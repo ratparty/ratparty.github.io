@@ -11,6 +11,7 @@ const mobileNavBar = document.getElementById("mobileNavBar");
 const mobileTitle = document.getElementById("mobileTitle");
 const navIcons = document.getElementById("navIcons");
 
+window.onscroll = function() {navBar()};
 
 function navBar() {
   if (document.body.scrollTop > h || document.documentElement.scrollTop > h) {
@@ -32,17 +33,13 @@ function navBar() {
     topNavHeader.classList.remove("top-nav__header--scrolled");
     topNavTitle.classList.remove("top-nav__title--scrolled");
     colourBlock.classList.remove("colour-block--scrolled");
-        mainNavList.classList.remove("main-nav__list--scrolled");
-            mobileNav.classList.remove("mobile-nav--scrolled");
-                mobileTitle.style.visibility = "hidden";
-                mobileTitle.style.maxHeight = "0rem";
-                    mobileTitle.style.opacity = "0";
-                    mobileTitle.style.transition = "opacity .7s .5s, max-height .0s .0s";
-
-
-  }
-}
-
-
+    mainNavList.classList.remove("main-nav__list--scrolled");
+    mobileNav.classList.remove("mobile-nav--scrolled");
+    mobileNavBar.classList.remove("mobile-nav__bar--scrolled");
+    mobileTitle.style.visibility = "hidden";
+    mobileTitle.style.maxHeight = "0rem";
+    mobileTitle.style.opacity = "0";
+    mobileTitle.style.transition = "opacity .7s .5s, max-height .0s .0s";
+    mobileNavBar.style.borderBottomLeftRadius = null;
   }
 }
