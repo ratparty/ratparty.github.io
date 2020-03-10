@@ -646,7 +646,11 @@ main {
 }
 
 .form__label {
-  margin-top: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+[type=text], [type=email], [type=tel] {
+  max-width: 20em;
 }
 
 .contact__radios {
@@ -664,6 +668,7 @@ main {
 
 #message {
   height: 9rem;
+  max-width: 30em;
 }
 
 [type=submit] {
@@ -671,6 +676,18 @@ main {
   margin: 1rem;
   align-self: flex-end;
   padding: 0.375rem;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  color: #fff;
+  background-image: linear-gradient(#5187c4, #1c2f45);
+  background-size: auto 200%;
+  background-position: 0 100%;
+  transition: background-position 0.5s;
+}
+
+[type=submit]:hover {
+  /* shift background gradient position */
+  background-position: 0 0;
 }
 
 .video {
