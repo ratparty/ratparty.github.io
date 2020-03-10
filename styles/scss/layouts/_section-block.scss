@@ -50,3 +50,14 @@
   @extend .grid-content-area;
   @include flex(space-around);
 }
+
+.gradient-divider {
+  @include grid;
+  width: 100%;
+}
+.gradient-divider--dark-light {
+  grid-column: span 12;
+  grid-row: span 11;
+  background: rgb(14,27,69);
+background: linear-gradient(180deg, rgba($dark-shade,1) 0%, rgba($dark-shade,1) 5%, rgba($light-colour,1) 95%, rgba($light-colour,1) 100%);
+}
