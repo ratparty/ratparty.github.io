@@ -639,6 +639,7 @@ main {
   grid-column: 1/span 12;
   place-self: center;
   max-width: 40rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -658,6 +659,7 @@ main {
   flex-direction: row;
   justify-content: space-around;
   align-items: stretch;
+  max-width: 30rem;
 }
 
 .form__text-box {
@@ -668,7 +670,7 @@ main {
 
 #message {
   height: 9rem;
-  max-width: 30em;
+  max-width: 40em;
 }
 
 [type=submit] {
