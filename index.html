@@ -31,24 +31,30 @@
         <li><a href="#contact-us">Contact</a></li>
       </ul>
     </nav>
-        <script src="scripts/script.js"></script>
   </div>
       <nav id="mobileNav" class="mobile-nav">
-    <script src="scripts/mobile-nav.js"></script>
-    <div class="nav-icons">
+    <!-- <script src="scripts/mobile-nav.js"></script> -->
+  <div class="mobile-nav__bar" id="mobileNavBar">
+    <div class="mobile-nav__title" id="mobileTitle">
+      <p>Captain Jim Bourbon</p>
+    <p>Tarpon Fishing in the Florida Keys</p>
+  </div>
+    <div class="nav-icons" id="navIcons">
    <a href="javascript:void(0);"  onclick="topnav()">
      <div id="open"><i class="fa fa-bars open nav-icon"></i></div>
   <div id="close"><i class="fas fa-angle-up nav-icon"></i></div></a>
 </div>
+</div>
   <div class="mobile-nav__menu" id="mobileNavMenu">
     <ul>
-    <li><a href="#trip-info">Trips</a></li>
-    <li><a href="#about-us">About</a></li>
-    <li><a href="#contact-us">Contact</a></li>
+    <li><a href="#trip-info" onclick="topnav()">Trips</a></li>
+    <li><a href="#about-us" onclick="topnav()">About</a></li>
+    <li><a href="#contact-us" onclick="topnav()">Contact</a></li>
   </ul>
 </div>
 
   </nav>
+  <script src="scripts/script.js"></script>
     <header class="header">
       <div class="header__layer header__layer--overlay"></div>
       <div class="header__layer header__layer--gradient">

@@ -1,5 +1,5 @@
-#mobileNav {
-  background-color: $colour-sky;
+.mobile-nav {
+  //background-color: $colour-blue;
   font-family: $body-font;
   color: $light-text;
   font-size: 1.25em;
@@ -8,28 +8,79 @@
   position: fixed;
   top: 0;
   right: 0;
-    z-index: 30000;
-     border-bottom-left-radius: 20px;
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+    align-items: flex-end;
+  //align-items: flex-end;
+  z-index: 30000;
+  border-bottom-left-radius: 20px;
+  transition: 0.7s ease-in-out;
   ul {
     @include flex(space-between, column);
     li
     {padding: .5rem 1rem;
     }
   }
-  @include max-width(700px){
+  @include max-width(750px){
   visibility: visible;
 }
+}
+.mobile-nav__bar {
+    width: 100%;
+      border-bottom-left-radius: 20px;
+      position: relative;
+      display: none;
+      justify-content: space-between;
+      overflow: hidden;
+      transition: 0.7s ease-in-out, border-bottom-left-radius .3s;
+
+        background-color: $colour-blue;
+        @include max-width(750px){
+        display: flex;
+      }
+}
+.mobile-nav__title {
+  float: left;
+  //position: absolute;
+
+  width: auto;
+  //left: 0;
+  max-height: 0;
+  display: inline-flex;
+  visibility: hidden;
+  //color: $colour-blue;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  opacity: 0;
+  transition: opacity .7s .5s, max-height .0s .5s;
+  overflow: hidden;
+  z-index: 0;
+  p {
+    margin: 0 auto 0 .5rem;
+    font-size: .8rem;
+  }
 }
 .nav-icon {
   font-size: 2rem;
   display: inline-block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  //padding: .5rem 1rem;
 
 }
 .nav-icons {
  @include flex(center);
-
+  position: relative;
+  align-items: center;
+  min-width: 60px;
   a {
+    width: 100%;
     padding: (.5*$ru) 1rem;
+    margin: auto;
   }
 }
 #open {
@@ -39,12 +90,29 @@
   display: none;
 }
 #mobileNavMenu {
+    background-color: $colour-blue;
    max-height: 0;
+   max-width: 3rem;
+   width: 3rem;
   overflow: hidden;
   padding: 0 10px;
-  transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out .4s, max-width .7s .8s;
+    border-bottom-left-radius: 0px;
 }
 
 .mobile-nav__menu--open {
   height: ($ru*4);
+
+
+}
+
+.mobile-nav--scrolled {
+  width: 100%;
+
+  border-bottom-left-radius: 0;
+}
+
+.mobile-nav__bar--scrolled {
+
+
 }
