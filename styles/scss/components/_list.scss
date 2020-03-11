@@ -1,15 +1,14 @@
 .list {
   width: 100%;
   @include flex(center, column, flex-start);
-  margin: 0 auto;
   dl, ul, ol {
     margin-top: 0;
     margin-bottom: 0;
     align-self: center;
-    width: 80%
+    max-width: 23rem;
   }
   dt {
-    text-align: center;
+    text-align: left;
     text-decoration: underline;
   }
   dd {
@@ -20,6 +19,5 @@
 }
 
 .list-header {
-
-
+  margin-bottom: ($ru*.5);
 }
