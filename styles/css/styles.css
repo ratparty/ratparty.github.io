@@ -884,7 +884,6 @@ main {
 }
 @media screen and (max-width: 600px) {
   .contact-container {
-    margin-left: auto;
     text-align: left;
   }
 }
@@ -1178,7 +1177,6 @@ footer ul {
 @media screen and (max-width: 600px) {
   .footer-nav {
     order: 2;
-    margin-right: auto;
   }
 }
 

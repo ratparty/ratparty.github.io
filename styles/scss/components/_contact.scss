@@ -6,7 +6,6 @@
     display: inline-block;
     margin-bottom: (2*$ru);
     @include max-width(600px){
-    margin-left: auto;
     text-align: left;
     }
 }
