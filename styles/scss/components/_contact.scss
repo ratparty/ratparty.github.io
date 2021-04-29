@@ -5,7 +5,7 @@
   	@include flex(center, column, flex-end);
     display: inline-block;
     margin-bottom: (2*$ru);
-    @include max-width(500px){
+    @include max-width(600px){
     margin-left: auto;
     text-align: left;
     }

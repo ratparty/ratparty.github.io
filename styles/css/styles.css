@@ -882,7 +882,7 @@ main {
   display: inline-block;
   margin-bottom: 3rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .contact-container {
     margin-left: auto;
     text-align: left;
@@ -1159,7 +1159,7 @@ footer ul {
   justify-content: space-between;
   justify-self: end;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .footer-info {
     flex-direction: column;
     justify-content: center;
@@ -1175,7 +1175,7 @@ footer ul {
 .footer-nav a {
   padding-bottom: 0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .footer-nav {
     order: 2;
     margin-right: auto;

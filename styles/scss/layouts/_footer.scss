@@ -18,7 +18,7 @@ footer {
 	justify-content: space-between;
   justify-self: end;
 
-  @include max-width(500px){
+  @include max-width(600px){
     flex-direction:column;
     justify-content: center;
     ul {
@@ -33,7 +33,7 @@ footer {
 	//		line-height: $baseline;
 			padding-bottom: 0;
 		}
-    @include max-width(500px){
+    @include max-width(600px){
     order: 2;
     margin-right: auto;
     }
