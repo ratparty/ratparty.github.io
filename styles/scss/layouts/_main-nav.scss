@@ -8,6 +8,9 @@
   display: flex;
   justify-content: flex-end;
   padding: .5em 2em;
+  font-family: $subtitle-font;
+  font-size: 1.25em;
+  font-weight: 400;
 
   &__list {
     @include horizontal-list;
