@@ -8,7 +8,7 @@
     grid-column: 2 / span 10;
   }
 
-  @include max-width(400px){
+  @include max-width(450px){
     grid-column: 1 / span 12;
     margin: 0 10px
   }

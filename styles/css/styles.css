@@ -1311,7 +1311,7 @@ footer ul {
     grid-column: 2/span 10;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .content {
     grid-column: 1/span 12;
     margin: 0 10px;
