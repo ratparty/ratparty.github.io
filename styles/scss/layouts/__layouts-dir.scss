@@ -5,9 +5,10 @@ Files inside this folder can contain specific element styles and layout.
 
 //Import Layout files
 @import "header";
-@import "main-navigation";
+@import "main-nav"; 
 @import "footer";
 @import "section-block";
 @import "grid";
+@import "content";
 @import "flex";
-@import "mobile-navigation";
+@import "mobile-nav";

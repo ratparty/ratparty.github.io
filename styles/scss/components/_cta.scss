@@ -1,0 +1,23 @@
+.cta {
+  position: relative;
+  z-index: 5;
+  color: white;
+
+  &__text {
+    font-weight: 700;
+  }
+}
+
+.cta__text {
+ color: white;
+ font-size: 3rem;
+ margin: 0 auto;
+ align-self: center;
+ @include text-outline($dark-blue, $text-shadow-2-2);
+ @include max-width(950px){
+   font-size: 2.5em;
+ }
+ @include max-width(760px){
+   font-size: 2em;
+ }
+}

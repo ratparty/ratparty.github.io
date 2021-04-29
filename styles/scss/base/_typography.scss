@@ -5,7 +5,7 @@ html {
 }
 p {
   line-height: 1.5;
-  margin: 2.25em 0 0;
+  margin: 1em 0;
 }
 ul {
   //font-family: $body-font;
@@ -49,19 +49,19 @@ h1 {
 
 h2 {
   font-family: $subtitle-font;
-  font-weight: normal;
   letter-spacing: .005rem;
   margin: 0 0 ($ru*.5);
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
-
+  font-weight: 400;
 }
 
 h3 {
   width: 100%;
-  text-align: center;
+
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 small {

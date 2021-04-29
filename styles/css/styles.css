@@ -348,6 +348,28 @@ template {
   display: none;
 }
 
+body {
+  box-sizing: border-box;
+}
+body * {
+  box-sizing: border-box;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.float-left {
+  display: inline-block;
+  float: left;
+}
+
 html {
   font-size: 112.5%;
   font-family: "Open Sans", sans-serif;
@@ -356,7 +378,7 @@ html {
 
 p {
   line-height: 1.5;
-  margin: 2.25em 0 0;
+  margin: 1em 0;
 }
 
 li {
@@ -397,19 +419,19 @@ h1 {
 }
 
 h2 {
-  font-family: "Bevan", serif;
-  font-weight: normal;
+  font-family: "Dosis", sans-serif;
   letter-spacing: 0.005rem;
   margin: 0 0 0.75rem;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
+  font-weight: 400;
 }
 
 h3 {
   width: 100%;
-  text-align: center;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 small {
@@ -544,11 +566,12 @@ Files inside this folder should contain all styles relating to a reusable compon
 }
 
 .guarantee {
-  background-color: #010E21;
+  background-color: #051924;
   color: #EFECE2;
 }
 .guarantee h2 {
   letter-spacing: 0.005em;
+  font-size: 2em;
   text-shadow: 1px 1px 1px #010E21, 0px 1px 1px #010E21, 1px 0px 1px #010E21, 0px 0px 1px #010E21, 0px -1px 1px #010E21, -1px 0px 1px #010E21, -1px 1px 1px #010E21, 1px -1px 1px #010E21;
   color: white;
   margin: 0 1rem;
@@ -571,6 +594,7 @@ img {
   max-width: 100%;
   max-height: auto;
   place-self: center;
+  margin: 1.5em 0;
 }
 
 img::after {
@@ -694,8 +718,7 @@ main {
 
 .video {
   margin: 0 auto;
-  grid-column: 3/span 8;
-  place-self: center;
+  margin-top: 4em;
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
@@ -760,17 +783,43 @@ main {
   margin-bottom: 0.75rem;
 }
 
+.cta {
+  position: relative;
+  z-index: 5;
+  color: white;
+}
+.cta__text {
+  font-weight: 700;
+}
+
+.cta__text {
+  color: white;
+  font-size: 3rem;
+  margin: 0 auto;
+  align-self: center;
+  text-shadow: 1px 1px 1px #010E21, 0px 1px 1px #010E21, 1px 0px 1px #010E21, 0px 0px 1px #010E21, 0px -1px 1px #010E21, -1px 0px 1px #010E21, -1px 1px 1px #010E21, 1px -1px 1px #010E21, 0px 3px 1px rgba(1, 14, 33, 0.4), 0px 2px 2px rgba(1, 14, 33, 0.28), 0px 1px 5px rgba(1, 14, 33, 0.24);
+}
+@media screen and (max-width: 950px) {
+  .cta__text {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 760px) {
+  .cta__text {
+    font-size: 2em;
+  }
+}
+
 .text-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  max-width: 33em;
 }
 
 .text-block--center {
-  max-width: 40em;
-  grid-column: 2/span 10;
-  place-self: center;
+  max-width: 33em;
 }
 
 .text-block--left {
@@ -806,9 +855,9 @@ main {
   max-width: 650px;
   margin: 4rem auto;
   padding: 1rem;
-  border: double 5px transparent;
-  border-radius: 10px;
-  background-image: linear-gradient(#e7e8ec, #e7e8ec), linear-gradient(50deg, #06227d, #0767F2);
+  border: double 4px transparent;
+  border-radius: 3px;
+  background-image: linear-gradient(#eceff1, #eceff1), linear-gradient(160deg, #009D82, #0B3585);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   box-shadow: 0px 1px 5px 0px rgba(1, 14, 33, 0.24), 0px 3px 1px -2px rgba(1, 14, 33, 0.4), 0px 2px 2px 0px rgba(1, 14, 33, 0.28);
@@ -825,6 +874,7 @@ main {
 }
 
 .contact-container {
+  text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -832,10 +882,10 @@ main {
   display: inline-block;
   margin-bottom: 3rem;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   .contact-container {
     margin-left: auto;
-    margin-right: auto;
+    text-align: left;
   }
 }
 
@@ -897,14 +947,9 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 .header__layer--overlay {
-  background: rgba(17, 57, 80, 0.48);
-  mix-blend-mode: overlay;
-}
-
-@media screen and (max-width: 800px) {
-  .header__layer--gradient {
-    top: -20%;
-  }
+  background: rgba(0, 101, 173, 0.48);
+  mix-blend-mode: multiply;
+  z-index: 0;
 }
 
 .cls-1b {
@@ -913,6 +958,7 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 .title {
+  position: relative;
   z-index: 5;
 }
 
@@ -925,68 +971,114 @@ Files inside this folder can contain specific element styles and layout.
   display: inline-block;
 }
 
-.cta__text {
-  color: #C3F73A;
-  font-size: 3rem;
-  margin: 0 auto;
-  align-self: center;
-  text-shadow: 1px 1px 1px #010E21, 0px 1px 1px #010E21, 1px 0px 1px #010E21, 0px 0px 1px #010E21, 0px -1px 1px #010E21, -1px 0px 1px #010E21, -1px 1px 1px #010E21, 1px -1px 1px #010E21, 0px 3px 1px rgba(1, 14, 33, 0.4), 0px 2px 2px rgba(1, 14, 33, 0.28), 0px 1px 5px rgba(1, 14, 33, 0.24);
-}
-@media screen and (max-width: 950px) {
-  .cta__text {
-    font-size: 2.5em;
-  }
-}
-@media screen and (max-width: 760px) {
-  .cta__text {
-    font-size: 2em;
-  }
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.svg {
+.main-nav {
   position: fixed;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.float-left {
-  display: inline-block;
-  float: left;
-}
-
-.top-nav {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--main-nav-bg);
+  z-index: 100;
   display: flex;
   justify-content: flex-end;
+  padding: 0.5em 2em;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(10px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.main-nav__list {
+  display: flex;
+  letter-spacing: 0.1em;
+}
+.main-nav__list li {
+  position: relative;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.main-nav__list li a::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 0%;
+  height: 0.7em;
+  bottom: -1px;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(10px);
+  background: #00A5CFb3;
+  z-index: -1;
+  transition: 0.2s;
+}
+.main-nav__list li a:hover::before {
   width: 100%;
-  z-index: 200;
-  font-family: "Anton", sans-serif;
-  font-size: 1.25rem;
-  color: white;
-  top: 0;
-  right: 0;
-  position: fixed;
-  padding: 0.5rem 0 0.5rem 2rem;
-  transition: background-color 0.3s;
-  min-height: 1.5rem;
-  height: auto;
-  overflow: visible;
 }
 @media screen and (max-width: 750px) {
-  .top-nav {
-    display: none;
+  .main-nav__list {
+    flex-direction: column;
+    visibility: hidden;
   }
 }
-
-.inline-block {
-  display: inline-block;
+.main-nav__mobile-button {
+  display: none;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  margin: 10px 10px 0 0;
+  z-index: 100;
+}
+@media screen and (max-width: 750px) {
+  .main-nav__mobile-button {
+    display: block;
+    border-radius: 50%;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(10px);
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.main-nav__icon {
+  display: none;
+}
+.main-nav__icon--visible {
+  display: block;
+}
+@media screen and (max-width: 750px) {
+  .main-nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: transparent;
+    backdrop-filter: none;
+    padding: 0;
+  }
+  .main-nav ul {
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(10px);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 40% 0;
+  }
+  .main-nav ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.main-nav--open {
+  height: 100vh;
+}
+.main-nav--open ul {
+  visibility: visible;
+}
+.main-nav--open ul li a::before {
+  content: none;
 }
 
 .top-nav__header {
@@ -1006,7 +1098,8 @@ nav ul {
   float: left;
   opacity: 0;
   transition: opacity 0.1s;
-  font-family: "Anton", sans-serif;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
   letter-spacing: 0.07em;
   z-index: 1;
 }
@@ -1024,48 +1117,7 @@ nav ul {
   z-index: 40;
 }
 
-.main-nav__list {
-  display: inline-flex;
-  position: absolute;
-  top: 0;
-  margin-left: auto;
-  z-index: 50;
-}
-.main-nav__list ul {
-  margin: auto 0;
-  float: right;
-}
-.main-nav__list ul li {
-  display: inline-block;
-  margin-left: -2px;
-  margin-right: 2em;
-}
-.main-nav__list li a {
-  position: relative;
-  letter-spacing: 0.1em;
-}
-.main-nav__list li a::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 0%;
-  height: 1em;
-  bottom: -0.1em;
-  background: #0767F2;
-  z-index: -1;
-  transition: 0.2s;
-}
-.main-nav__list li a:hover::before {
-  width: 100%;
-}
-@media screen and (max-width: 750px) {
-  .main-nav__list {
-    visibility: hidden;
-  }
-}
-
 .top-nav--scrolled {
-  background-color: #06227d;
   justify-content: space-between;
   box-shadow: 0px 1px 18px 0px rgba(1, 14, 33, 0.24), 0px 3px 5px -1px rgba(1, 14, 33, 0.4), 0px 6px 10px 0px rgba(1, 14, 33, 0.28);
 }
@@ -1074,13 +1126,10 @@ nav ul {
   opacity: 1;
 }
 
-.top-nav__title--scrolled {
-  opacity: 1;
-}
-
 .main-nav__list--scrolled {
   position: relative;
   top: auto;
+  transform: none;
 }
 
 .colour-block--scrolled {
@@ -1092,10 +1141,14 @@ footer {
   grid-auto-rows: minmax(1.5rem, auto);
   grid-gap: 0.75rem;
   grid-template-columns: repeat(12, 1fr);
-  background-color: #010E21;
+  background-color: #051924;
   color: #EFECE2;
   font-weight: 300;
   padding: 4.5rem 0 6rem;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-info {
@@ -1104,12 +1157,14 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  justify-self: end;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   .footer-info {
-    grid-column: 2/span 10;
-    place-self: center;
     flex-direction: column;
+    justify-content: center;
+  }
+  .footer-info ul {
     justify-content: center;
   }
 }
@@ -1120,10 +1175,9 @@ footer {
 .footer-nav a {
   padding-bottom: 0;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   .footer-nav {
     order: 2;
-    margin-left: auto;
     margin-right: auto;
   }
 }
@@ -1144,18 +1198,18 @@ footer {
   justify-content: center;
   align-items: stretch;
 }
-.section--grid, .subsection--grid {
+.section--grid {
   width: 100%;
   display: grid;
   grid-auto-rows: minmax(1.5rem, auto);
   grid-gap: 0.75rem;
   grid-template-columns: repeat(12, 1fr);
 }
-.section--grid > h2, .subsection--grid > h2, .section--grid h3, .subsection--grid h3 {
+.section--grid > h2, .section--grid h3 {
   grid-column: span 12;
   justify-self: center;
 }
-.section--grid > p, .subsection--grid > p, .section--grid dl, .subsection--grid dl {
+.section--grid > p, .section--grid dl {
   justify-self: center;
 }
 
@@ -1166,8 +1220,7 @@ footer {
   justify-self: center;
 }
 
-.subsection--grid {
-  grid-column: 1/span 12;
+.subsection {
   margin-top: 3.75rem;
 }
 
@@ -1182,14 +1235,17 @@ footer {
 }
 
 .section--dark {
-  background-color: #0e1b45;
+  background-color: #051924;
+  background-color: #eceff1;
   color: #EFECE2;
+  color: #051924;
 }
 
 .section--light {
   background-color: #cfd1da;
-  background-color: #cfd1da;
+  background-color: #fdfdf0;
   color: #010E21;
+  color: #051924;
 }
 
 .text-image {
@@ -1241,16 +1297,22 @@ footer {
   max-width: 30em;
 }
 
-.single-column, .section--grid > p, .section--grid dl, .section--main > p, .section--main dl, .subsection--grid > p, .subsection--grid dl {
-  max-width: 40em;
-}
-.single-column p, .section--grid > p p, .section--grid dl p, .section--main > p p, .section--main dl p, .subsection--grid > p p, .subsection--grid dl p {
-  align-self: center;
-}
-
-.grid-content-area, .subsection--double-column, .text-image, .single-column, .section--grid > p, .section--grid dl, .section--main > p, .section--main dl, .subsection--grid > p, .subsection--grid dl {
+.grid-content-area, .subsection--double-column, .text-image {
   grid-column: 3/span 8;
   place-self: center;
+}
+
+.content {
+  grid-column: 3/span 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 400px) {
+  .content {
+    grid-column: 1/span 12;
+    margin: 0 10px;
+  }
 }
 
 .flex {
@@ -1281,7 +1343,7 @@ footer {
   flex-direction: column;
   align-items: flex-end;
   z-index: 30000;
-  border-bottom-left-radius: 20px;
+  border-radius: 50%;
   transition: 0.7s ease-in-out;
 }
 .mobile-nav ul {
@@ -1306,7 +1368,7 @@ footer {
   justify-content: space-between;
   overflow: hidden;
   transition: 0.7s ease-in-out, border-bottom-left-radius 0.3s;
-  background-color: #06227d;
+  background-color: #0e1b45;
 }
 @media screen and (max-width: 750px) {
   .mobile-nav__bar {
@@ -1367,18 +1429,16 @@ footer {
 }
 
 #mobileNavMenu {
-  background-color: #06227d;
+  background-color: #0e1b45;
   max-height: 0;
-  max-width: 3rem;
-  width: 3rem;
   overflow: hidden;
   padding: 0 10px;
   transition: 0.7s ease-in-out 0.4s, max-width 0.7s 0.8s;
-  border-bottom-left-radius: 0px;
 }
 
-.mobile-nav__menu--open {
-  height: 6rem;
+.mobile-nav__menu {
+  height: 100%;
+  width: 100%;
 }
 
 .mobile-nav--scrolled {
@@ -1396,6 +1456,14 @@ footer {
 
 .nav-bar--closed {
   border-bottom-left-radius: 20px;
+}
+
+header {
+  /* for some reason, the backdrop-filter: blur on the nav
+     only works if the header also has it set, even if it's set to 0?
+     it doesn't even just apply to making the header blur, but the whole page.
+     I'm assuming something to do with the stacking context but I really do not know.*/
+  backdrop-filter: blur(0px);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -10,20 +10,19 @@
     justify-self: center;
   }
   > p, dl {
-    @extend .single-column;
+
     justify-self: center;
   }
 }
 .section--main {
   padding: ($rhythm-unit*5) 0 ($rhythm-unit*10);
   > p, dl {
-    @extend .single-column;
+
     justify-self: center;
   }
 }
-.subsection--grid {
-  @extend .section--grid;
-  grid-column: 1 / span 12;
+.subsection{
+
     margin-top: ($rhythm-unit*2.5);
 }
 .section__text {
@@ -33,13 +32,17 @@
   }
 }
 .section--dark {
-  background-color: $dark-shade;
+  background-color: $darkest-blue;
+  background-color: #eceff1;
+
     color: $light-text;
+    color: $darkest-blue;
 }
 
 .section--light {
   background-color: $light-colour;
   @include light-scheme;
+  color: $darkest-blue;
 }
 .subsection--double-column {
   @extend .grid-content-area;

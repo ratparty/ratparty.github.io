@@ -27,13 +27,7 @@
   }
 }
 
-.single-column {
-  @extend .grid-content-area;
-  max-width: 40em;
-  p {
-    align-self: center;
-  }
-}
+
 .grid-content-area {
     grid-column: 3 /span 8;
     place-self: center;

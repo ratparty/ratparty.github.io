@@ -2,16 +2,24 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
 }
 
 @mixin horizontal-list {
-  li {
-    display: inline-block;
-    margin: {
-      left: -2px;
-      right: 2em;
-    }
+  display: flex;
+  
+  li:not(:first-child) {
+//    margin-left: 1em;
+    // margin: {
+    //   left: -2px;
+    //   right: 2em;
+    // }
   }
+
+  // li:not(:last-child) {
+  //   margin-right: 1em;
+  // }
+
 }
 
 @mixin pseudo-setup {
@@ -57,13 +65,13 @@
 }
 
 @mixin dark-scheme{
-  background-color: $dark-blue;
+  background-color: $darkest-blue;
   color: $light-text;
 
 }
 
 @mixin light-scheme{
-  background-color: $light-colour;
+  background-color: $light-bg;
     color: $dark-blue;
 }
 

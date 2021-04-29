@@ -1,0 +1,21 @@
+body {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+nav {
+  ul {
+    @include reset-list;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+.float-left {
+  display: inline-block;
+  float: left;
+}

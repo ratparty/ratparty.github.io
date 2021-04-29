@@ -7,7 +7,8 @@
     <meta name="description" content="Join us for fun and exciting tarpon fishing charters based out of the Florida Keys. We promise you'll fight a tarpon, or we'll take you fishing again for free.">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Anton|Bevan|Open+Sans:300,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@300;400;500;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/css/styles.css" type="text/css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
@@ -26,62 +27,30 @@
       <meta name="twitter:image:alt"      content="A large tarpon jumping out of the water." />
   </head>
   <body>
-      <div class="top-nav" id="topNav">
-        <div class="top-nav__header" id="topNavHeader">
-          <div class="top-nav__title" id="topNavTitle">
-          <p>Captain Jim Bourbon</p>
-          <p>Tarpon Fishing in the Florida Keys</p>
+    <script src="scripts/mobile-nav.js"></script>
+      <nav class="main-nav" id="mainNav">
+
+        <div class="main-nav__mobile-button" id="navButton">
+          <div class="main-nav__icon main-nav__icon--visible" id="iconOpen">
+            <i class="fa fa-bars open main-nav__icon main-nav__icon--visible"></i>
+          </div>
+          <div class="main-nav__icon" id="iconClose">
+            <i class="fas fa-angle-up main-nav__icon"></i>
+          </div>
         </div>
-        <div class="colour-block" id="colourBlock"></div>
-      </div>
-      <nav class="main-nav__list" id="mainNavList">
-        <ul>
+      
+      <ul class="main-nav__list" id="mainNavList">
         <li><a href="#trip-info">Trips</a></li>
         <!-- <li><a href="testimonials">Testimonials</a></li>
         <li><a href="florida-keys.html">The Florida Keys</a></li> -->
         <li><a href="#about-us">About</a></li>
         <li><a href="#contact-us">Contact</a></li>
       </ul>
-    </nav>
-  </div>
-      <nav id="mobileNav" class="mobile-nav">
-    <script src="scripts/mobile-nav.js"></script>
-  <div class="mobile-nav__bar nav-bar--closed" id="mobileNavBar">
-    <div class="mobile-nav__title" id="mobileTitle">
-      <p>Captain Jim Bourbon</p>
-    <p>Tarpon Fishing in the Florida Keys</p>
-  </div>
-    <div class="nav-icons" id="navIcons">
-   <a href="javascript:void(0);"  onclick="topnav()">
-     <div id="open"><i class="fa fa-bars open nav-icon"></i></div>
-  <div id="close"><i class="fas fa-angle-up nav-icon"></i></div></a>
-</div>
-</div>
-  <div class="mobile-nav__menu" id="mobileNavMenu">
-    <ul>
-    <li><a href="#trip-info" onclick="topnav()">Trips</a></li>
-    <li><a href="#about-us" onclick="topnav()">About</a></li>
-    <li><a href="#contact-us" onclick="topnav()">Contact</a></li>
-  </ul>
-</div>
-
+  <!-- </div> -->
   </nav>
   <script src="scripts/script.js"></script>
     <header class="header">
       <div class="header__layer header__layer--overlay"></div>
-      <div class="header__layer header__layer--gradient">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="100%" height="100%" viewBox="0 0 1517.711 845.341">
-        <defs>
-          <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.515" gradientTransform="translate(0 0.09) scale(1 0.82)" gradientUnits="objectBoundingBox">
-            <stop offset="0" stop-color="#010e21"/>
-            <stop offset="0.24" stop-color="#010e21"/>
-            <stop offset="0.483" stop-color="#010e21" stop-opacity="0.8"/>
-            <stop offset="1" stop-color="#010e21" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <path id="Path_55" data-name="Path 55" class="cls-1b" d="M0,0H1517.711V845.341H0Z"/>
-      </svg></div>
 
       <!-- <div class="page-landing"> -->
         <div class="title">
@@ -138,12 +107,13 @@
 </h2>
       </div>
       <section class="section--grid section--light section--main">
+        <div class="content">
 
         <img src="assets/fish-500x332-min.png" class="fish-jump-img img-left"
         alt="Captain Jim providing assistance as a hooked tarpon leaps almost fully
         out of the water.">
 
-        <div class="text-block text-block--right">
+        <div class="text-block single-column">
           <p>We have built our business on repeat customers,
           and we've done this by ensuring a great tarpon fishing experience.
         </p>
@@ -169,18 +139,19 @@
         <div class="video">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/wy7oehI6vJY?autohide=1&amp;modestbranding=1&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
       </div>
-
+      </div>
     </section>
 
       <section class="section--dark section--grid section--main">
+        <div class="content">
         <div class="anchor-link"  id="trip-info"></div>
         <h2>Trip Info</h2>
         <div class="text-block text-block--center">
         <p>$495 for half day with up to 6 anglers, discounts are available.</p>
+        <img src="assets/matthieugwadafly-flickr-424x281-min.png" class="img-right" alt="Tarpon jumping as an angler fights it near the boat.">
       </div>
-        <section class="subsection--grid">
+        <section class="subsection">
           <h3>Why fish with us?</h3>
-                    <img src="assets/matthieugwadafly-flickr-424x281-min.png" class="img-right" alt="Tarpon jumping as an angler fights it near the boat.">
           <div class="text-block text-block--left">
             <p>Number one: success. We catch fish through experience, skill, and
             hard work.</p>
@@ -188,9 +159,7 @@
             memorable fishing trip of your life, and we hope you don’t mind if
             we have as much fun as you do.</p>
           </div>
-
-        </section>
-        <section class="subsection--grid">
+        <section class="subsection">
           <h3>Our Guarantee</h3>
           <div class="text-block text-block--center">
             <p>We ensure that you have a great tarpon fishing experience. We
@@ -200,7 +169,7 @@
               or give it away to a friend.</p>
             </div>
         </section>
-        <section class="subsection--grid">
+        <section class="subsection">
           <h3>Rates & Details</h3>
           <div class="text-block text-block--center">
           <p>$495 for a half day with up to 6 anglers, discounts are available.</p>
@@ -225,7 +194,7 @@
           </list>
         </div>
         </section>
-        <section class="subsection--grid">
+        <section class="subsection">
           <h3>Location</h3>
           <div class="text-block text-block--center">
           <p>We are located at the docks of Bahia Honda State Park, mile marker
@@ -235,15 +204,17 @@
             can’t go wrong in the fabulous Florida Keys.</p>
           </div>
         </section>
-        <section class="subsection--grid">
+        <section class="subsection">
           <h3>What to Bring</h3>
           <div class="text-block text-block--center">
           <p>Food, drinks and sunscreen.</p>
         </div>
 
         </section>
+      </div>
       </section>
       <section class="section--light section--grid section--main">
+        <div class="content">
         <div class="anchor-link"  id="about-us"></div>
         <h2>About Us</h2>
         <div class="text-block text-block--center">
@@ -270,8 +241,10 @@
               confident in guaranteeing you one of the best fishing experiences
               you have ever had.</p>
             </div>
+            </div>
         </section>
         <section class="section--dark section--grid section--main">
+          <div class="content">
           <div class="anchor-link"  id="contact-us"></div>
           <h2>Contact Us</h2>
           <div class="text-block text-block--center">
@@ -337,6 +310,7 @@
               <button type="submit" name="button">Submit</button>
 
       </form>
+      </div>
   </section>
 </main>
 <footer class="">

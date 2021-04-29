@@ -9,9 +9,9 @@
   max-width: 650px;
   margin: 4rem auto;
   padding: 1rem;
-  border: double 5px transparent;
-  border-radius: 10px;
-  background-image: linear-gradient(#e7e8ec, #e7e8ec), linear-gradient(50deg, $colour-blue, $bright-blue);
+  border: double 4px transparent;
+  border-radius: 3px;
+  background-image: linear-gradient( #eceff1, #eceff1), linear-gradient(160deg, #009D82, $blue);
   //using diff bg colour
   //background-image: linear-gradient(color.scale($colour-sky, $lightness:60%), color.scale($colour-sky, $lightness:60%)), linear-gradient(50deg, $colour-blue, $bright-blue);
   background-origin: border-box;

@@ -3,6 +3,11 @@ footer {
   @include dark-scheme;
   font-weight: 300;
   padding: (3*$ru) 0 (4*$ru);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .footer-info {
@@ -11,9 +16,14 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-  @include single-column{
+  justify-self: end;
+
+  @include max-width(500px){
     flex-direction:column;
     justify-content: center;
+    ul {
+      justify-content: center;
+    }
   }
 }
 
@@ -23,9 +33,8 @@ footer {
 	//		line-height: $baseline;
 			padding-bottom: 0;
 		}
-    @include max-width(900px){
+    @include max-width(500px){
     order: 2;
-    margin-left: auto;
     margin-right: auto;
     }
 }

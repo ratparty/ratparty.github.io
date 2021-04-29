@@ -1,0 +1,11 @@
+.content {
+  grid-column: 3 / span 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include max-width(400px){
+    grid-column: 1 / span 12;
+    margin: 0 10px
+  }
+}

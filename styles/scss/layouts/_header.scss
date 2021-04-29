@@ -32,15 +32,11 @@
   width: 100%;
 }
 .header__layer--overlay {
-  background: rgba($header-overlay,.48);
-  mix-blend-mode: overlay;
+  background: rgb(0 101 173 / 48%);
+  mix-blend-mode: multiply;
+  z-index: 0;
 }
 
-.header__layer--gradient{
-  @include max-width(800px){
-    top: -20%;
-  }
-}
 .cls-1b {
   opacity: 0.2;
   fill: url(#radial-gradient);
@@ -57,6 +53,7 @@
 // }
 
 .title {
+  position: relative;
   z-index: 5;
 }
 
@@ -66,26 +63,4 @@
 }
 .title__florida-keys {
   display: inline-block;
-}
- .cta {
-//
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//     flex: 1;
- }
-
-.cta__text {
-  color: $green;
-  font-size: 3rem;
-  margin: 0 auto;
-  align-self: center;
-  @include text-outline($dark-blue, $text-shadow-2-2);
-  @include max-width(950px){
-    font-size: 2.5em;
-  }
-  @include max-width(760px){
-    font-size: 2em;
-  }
 }

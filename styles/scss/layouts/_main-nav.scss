@@ -1,0 +1,255 @@
+.main-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--main-nav-bg);
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  padding: .5em 2em;
+
+  &__list {
+    @include horizontal-list;
+    letter-spacing: .1em;
+
+    li {
+      position: relative;
+      margin: {
+        left: 1em;
+        right: 1em;
+      }
+    }
+    li a::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 0%;
+      height: .7em;
+      bottom: -1px;
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(10px);
+      background: #{$light-blue}b3;
+      z-index: -1;
+      transition: .2s;
+    }
+      li a:hover::before {
+      width: 100%;
+    }
+
+    @include max-width(750px){
+      flex-direction: column;
+      visibility: hidden;
+    }
+
+  }
+
+  &__mobile-button {
+    display: none;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+    margin: 10px 10px 0 0;
+    z-index: 100;
+
+    @include max-width(750px){
+      display: block;
+      border-radius: 50%;
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(10px);
+      background-color: rgba(255, 255, 255, 0.7);
+      height: 45px;
+      width: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(10px);
+  background-color: rgba(255, 255, 255, 0.7);
+
+  @include max-width(750px){
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: transparent;
+    backdrop-filter: none;
+    padding: 0;
+
+    ul {
+      align-items: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(10px);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 40% 0;
+
+      li {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  &--open {
+    
+    height: 100vh;
+
+    ul {
+      visibility: visible;
+      
+      li a::before {
+        content: none;
+      }
+
+    }
+  }
+}
+
+
+// .blend {
+//   mix-blend-mode: luminosity;
+//   position: relative;
+//   overflow: visible;
+//   z-index: 2000;
+// }
+
+// .top-nav {
+//   display: flex;
+//   justify-content: flex-end;
+//   width: 100%;
+//   z-index: 200;
+//   font-family: $subtitle-font;
+//   font-weight: 500;
+//   font-size: 1.25rem;
+//   color: white;
+//   top: 0;
+//   right: 0;
+//   position: fixed;
+//   padding: 0 0 0 2rem;
+//   transition: background-color .3s;
+//   min-height: (1*$ru);
+  
+//   height: auto;
+//     overflow: visible;
+//     @include max-width(750px){
+//       display: none;
+//     }
+
+//     background-color: #{$dark-shade}cc;
+//     -webkit-backdrop-filter: saturate(180%) blur(10px);
+//     backdrop-filter: saturate(180%) blur(10px);
+// }
+
+
+.top-nav__header {
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity;
+  transition-delay: .5s;
+  position: relative;
+  p {
+    margin: 0 0 0 .5em;
+    overflow: hidden;
+
+  }
+  z-index: 5;
+  }
+.top-nav__title {
+  float: left;
+  opacity: 0;
+   transition: opacity .1s;
+  // transition-delay: .4s;
+  font-family: $subtitle-font;
+  font-weight: 500;
+  letter-spacing: .07em;
+  z-index: 1;
+}
+
+  .colour-block {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 500%;
+    background: $colour-blue;
+    background: linear-gradient(0deg, rgba($colour-blue,0) 0%, rgba($colour-blue,1) 80%, rgba($colour-blue,1) 100%);
+    // background: rgb(109,152,182);
+    // background: linear-gradient(0deg, rgba(109,152,182,0) 0%, rgba(109,152,182,1) 80%, rgba(109,152,182,1) 100%);
+    transition-property: top;
+    transition-delay: .5s;
+    transition-duration: 1s;
+  z-index: 40;
+  }
+  // p::before {
+  //     visibility: hidden;
+  //     content: "Captain Jim Bourbon's Tarpon Fishing in the Florida Keys";
+  //     position: absolute;
+  //     z-index: -2;
+  //     left: 0;
+  //     width: 100%;
+  //     padding-left: 99%;
+  // }
+
+
+
+.main-nav__list {
+  //display: inline-flex;
+  //position: absolute;
+ // top: 50%;
+  //transform: translateY(-50%);
+ // margin-left: auto;
+  //z-index: 50;
+
+
+}
+
+.top-nav--scrolled {
+  //background-color: #06227d;
+  //rgba($colour-sky, 1);
+  justify-content: space-between;
+    @include aup-shadow(box, $dark-blue, 2, 6);
+}
+.top-nav__header--scrolled {
+  opacity: 1;
+}
+.top-nav__title--scrolled {
+
+  //opacity: 1;
+
+}
+.main-nav__list--scrolled {
+  position: relative;
+  top: auto;
+  transform: none;
+}
+.colour-block--scrolled {
+  top: -500%;
+  // transition-property: opacity, top;
+  // transition-delay: .3s, .5s;
+  // transition-duration: 0s, .5s;
+}
+// .main-nav::before {
+//   content: "";
+//   background-color: rgba(0,205,238,1.0);
+// //  mix-blend-mode: screen;
+//   width: 110%;
+//   height: 120%;
+//   position: absolute;
+//   left: -10%;
+//   height: -20%;
+// }

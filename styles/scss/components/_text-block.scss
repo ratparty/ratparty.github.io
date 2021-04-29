@@ -1,11 +1,10 @@
 .text-block {
     @include flex(center, column);
+    max-width: 33em;
 }
 
 .text-block--center{
-    max-width: 40em;
-        grid-column: 2/span 10;
-    place-self: center;
+    max-width: 33em;
 }
 
 .text-block--left {
@@ -21,7 +20,7 @@
   grid-column: 6 / span 6;
     grid-row: span 2;
     max-width: 30em;
-        justify-self: start;
+    justify-self: start;
     padding-left: 1rem;
    @include single-column;
 }

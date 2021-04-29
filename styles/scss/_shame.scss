@@ -1,0 +1,7 @@
+header {
+  /* for some reason, the backdrop-filter: blur on the nav
+     only works if the header also has it set, even if it's set to 0?
+     it doesn't even just apply to making the header blur, but the whole page.
+     I'm assuming something to do with the stacking context but I really do not know.*/
+  backdrop-filter: blur(0px);
+}
