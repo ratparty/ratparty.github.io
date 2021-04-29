@@ -979,7 +979,7 @@ Files inside this folder can contain specific element styles and layout.
   z-index: 100;
   display: flex;
   justify-content: flex-end;
-  padding: 0.25em 2em;
+  padding: 0.5em 2em;
   font-family: "Dosis", sans-serif;
   font-size: 1.25em;
   font-weight: 500;
