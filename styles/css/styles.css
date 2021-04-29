@@ -1035,6 +1035,7 @@ Files inside this folder can contain specific element styles and layout.
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 }
 .main-nav__icon {

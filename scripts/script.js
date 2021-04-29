@@ -1,12 +1,8 @@
-const h = window.innerHeight
-
 let mainNav = document.getElementById("mainNav");
 let navButton = document.getElementById("navButton");
 let iconOpen = document.getElementById("iconOpen");
 let iconClose = document.getElementById("iconClose");
 let navLinks = document.querySelectorAll('.nav-link');
-
-window.onscroll = function() {navBar()};
 
 navButton.addEventListener('click', toggleMenu);
 
@@ -21,9 +17,9 @@ function toggleMenu() {
 }
 
 function closeMenuOnSelection() {
-  if (mainNav.classList.contains('main-nav--open') {
+  if (mainNav.classList.contains('main-nav--open')) {
     mainNav.classList.remove('main-nav--open');
-  })
+  }
 }
 
 
