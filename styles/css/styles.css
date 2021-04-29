@@ -982,7 +982,8 @@ Files inside this folder can contain specific element styles and layout.
   padding: 0.5em 2em;
   font-family: "Dosis", sans-serif;
   font-size: 1.25em;
-  font-weight: 400;
+  font-weight: 500;
+  text-transform: uppercase;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(10px);
   background-color: rgba(255, 255, 255, 0.7);

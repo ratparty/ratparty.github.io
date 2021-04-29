@@ -10,7 +10,8 @@
   padding: .5em 2em;
   font-family: $subtitle-font;
   font-size: 1.25em;
-  font-weight: 400;
+  font-weight: 500;
+  text-transform: uppercase;
 
   &__list {
     @include horizontal-list;
